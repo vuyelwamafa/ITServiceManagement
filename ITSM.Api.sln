@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.37614.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITSM.Api", "ITSM.Api.csproj", "{E37000E1-3F49-BAB3-BBD0-F4A45288F4E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITSM.Infrastructrure", "..\ITSM.Infrastructrure\ITSM.Infrastructrure.csproj", "{AD712654-0AC1-43E8-BC18-213AA5B5FB5E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITSM.Infrastructure", "..\ITSM.Infrastructrure\ITSM.Infrastructure.csproj", "{AD712654-0AC1-43E8-BC18-213AA5B5FB5E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITSM.Domain", "..\ITSM.Domain\ITSM.Domain.csproj", "{9F513854-37F1-4B1F-B306-C46EE046E64A}"
 EndProject
