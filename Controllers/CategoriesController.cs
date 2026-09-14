@@ -33,7 +33,50 @@ namespace ITSM.Api.Controllers
             };
             _context.Categories.Add(category);
             await _context.SaveChangesAsync();
+            return CreatedAtAction(
+                nameof(GetCategory),
+                new {id = category.Id},
+                category);
+        }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCategory(int id)
+        {
+            var category = await _context.Categories.FindAsync(id);
+            if (category == null)
+            {
+                return NotFound();
+            }
             return Ok(category);
         }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCategory(int id, UpdateCategoryRequest request)
+        {
+            var category = await _context.Categories.FindAsync(id);
+            if (category == null)
+            {
+                return NotFound();
+            }
+            category.Name = request.Name;
+            category.Description = request.Description;
+            category.IsActive = request.IsActive;
+
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCategory(int id)
+        {
+            var category = await _context.Categories.FindAsync(id);
+            if (category == null)
+            {
+                return NotFound();
+            }
+            _context.Categories.Remove(category);
+
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }   
     }
 }
