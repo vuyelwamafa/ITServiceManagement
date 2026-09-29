@@ -10,6 +10,7 @@
 *.userosscache
 *.sln.docstates
 
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -302,6 +303,7 @@ node_modules/
 **/*.Server/ModelManifest.xml
 _Pvt_Extensions
 
+
 # Paket dependency manager
 .paket/paket.exe
 paket-files/
@@ -361,3 +363,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+**/appsettings.Development.json
